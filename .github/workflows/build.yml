@@ -22,7 +22,7 @@ jobs:
         sudo apt-get install build-essential libboost-all-dev libminiupnpc-dev libssl-dev zlib1g-dev
 
     - name: build application
-      run: make USE_UPNP=${{ matrix.with_upnp }} -j3
+      run: make USE_UPNP=${{ matrix.with_upnp }} WITH_STATIC=yes -j3
 
   build-cmake:
     name: CMake with -DWITH_UPNP=${{ matrix.with_upnp }}
@@ -45,5 +45,5 @@ jobs:
     - name: build application
       run: |
         cd build
-        cmake -DWITH_UPNP=${{ matrix.with_upnp }} .
+        cmake -DWITH_STATIC=ON -DWITH_UPNP=${{ matrix.with_upnp }} .
         make -j3
