@@ -1,7 +1,5 @@
 name: Build on OSX
 
-on: [push, pull_request]
-
 jobs:
   build:
     name: With USE_UPNP=${{ matrix.with_upnp }}

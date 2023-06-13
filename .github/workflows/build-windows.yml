@@ -1,7 +1,5 @@
 name: Build on Windows
 
-on: [push, pull_request]
-
 defaults:
   run:
     shell: msys2 {0}

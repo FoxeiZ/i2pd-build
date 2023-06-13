@@ -1,7 +1,5 @@
 name: Build on Windows with MSVC
 
-on: [push, pull_request]
-
 jobs:
   build:
     name: Build

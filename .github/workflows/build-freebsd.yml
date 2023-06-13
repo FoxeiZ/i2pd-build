@@ -1,7 +1,5 @@
 name: Build on FreeBSD
 
-on: [push, pull_request]
-
 jobs:
   build:
     runs-on: macos-12

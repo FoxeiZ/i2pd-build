@@ -1,13 +1,5 @@
 name: Build containers
 
-on:
-  push:
-    branches:
-    - openssl
-    - docker
-    tags:
-    - '*'
-
 jobs:
   build:
     name: Building container for ${{ matrix.platform }}
